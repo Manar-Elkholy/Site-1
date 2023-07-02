@@ -1,0 +1,825 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+body{
+    height: 6000px;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #312d2d;
+    overflow: auto;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
+}
+.logo{
+    width: 80px;
+    height: 100%;
+    float: left;
+    margin-left: 150px;
+}
+.list1{
+    float: right;
+    margin-right: 120px;
+    margin-top: 30px;
+}
+.list1 li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+
+    }
+.underline{
+    width: 100%; height: 100%;
+    position: relative;
+}
+.list1 li a{
+    text-decoration: none;
+    font-size: larger;
+    color: #fff;
+}
+.underline:after{
+content: "";
+position: absolute;
+width: 0; height: 20%; left: 0; bottom: 0; right: 0;
+background-color:#fff; opacity: 0;
+transition: 1s;
+}
+.underline:hover::after{
+    width: 100%;
+    height: 20%;
+    opacity: 1;
+}
+.parent{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/seoul-vector.jpg);
+    position: relative;
+}
+.overlay{
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(255,255,255, 0.5);
+    position: absolute;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.title1{
+    color: #312d2d;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+.p1{
+font-size: 25px;
+letter-spacing: 2px;
+margin-bottom: 12px;
+}
+.btn{
+    text-transform: capitalize;
+    font-size: 22px;
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+
+}
+.btn1{
+    background-color: #312d2d;
+    margin-right: 15px;
+}
+.btn2{
+    background-color: #995656;
+}
+.btn:hover{
+opacity: 0.5;
+}
+.parent2{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+}
+.title2{
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-top: 100px;
+    padding-bottom: 12px;
+}
+.content2 .line{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin: auto;
+}
+.cards{
+    overflow: auto;
+    width: 1100px;
+    height: 200px;
+    margin: 50px auto;
+}
+.cards-card1{
+    width: 300px;
+    height: 200px;
+    border: #312d2d solid 1px; 
+    padding: 20px 10px;
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.cardtitle1{
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.heart ,.star ,.hot{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.cards-card1 .cardtitle1:hover{
+    color: #fff;
+}
+.cardpara1{
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #632323;
+}
+.cards-card1:after{
+    content: "";
+    top: 0; left: 0;
+    width: 0; height: 0;
+    position: absolute;
+    background-color: #312d2d91; opacity: 0;
+    transition: 1s;
+}
+.cards-card1:hover::after{
+    bottom: 0; right: 0;
+    width: 100%; height: 100%;
+    opacity: 0.5;
+}
+.cards-card1:hover .cardtitle1{
+    color:#632323;
+    font-weight: bold;
+}
+.cards-card1:hover .cardpara1{
+color: #000000;
+}
+.readmore{
+    font-size: 20px;
+    text-decoration: none;
+    color: #312d2d;
+}
+.parent3{
+    margin-top: -100px;
+    width: 100%;
+    height: 180vh;
+    background-color: #ddc1c1;
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+}
+.content3 .line{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin: auto;
+}
+.imgcards{
+    width: 1150px;
+    height: 660px;
+    margin: 80px auto;
+}
+.parent3-imgcards{
+    width: 250px;
+    height: 300px;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    float: left;
+    position: relative;
+}
+.parent3-imgcards img{
+    width: 100%;
+    height: 100%;
+}
+.imgcards-overlays-content{
+    width: 100%;
+ top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.imgcards-overlays{
+    width: 120%; height: 120% ;
+    top: 0; left: 0; right: 0; bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #312d2d71;
+    transition: 1s;
+top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.parent3-imgcards:hover .imgcards-overlays{
+visibility: visible;
+opacity: 1;
+}
+.imgcards-overlays-title{
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.parent3-imgcards:hover .imgcards-overlays-title{
+    visibility: visible;
+    opacity: 1;
+}
+.imgcards-overlays-p{
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 3s;
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #fff;
+}
+.parent3-imgcards:hover .imgcards-overlays-p{
+    visibility: visible;
+    opacity: 1;
+}
+.imgcards-overlays-icons{
+     width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+        margin-bottom: 10px;
+}
+.imgcards-overlays-icons a{
+    font-size: 40px;
+    margin-left: 2px;
+    color:#632323;
+}
+.parent3-imgcards:hover .imgcards-overlays-icons{
+    visibility: visible;
+    opacity: 1;
+}
+
+.parent4{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+}
+.parent4-cards{
+    width: 1160px;
+    height: 420px;
+    margin: 70px auto;
+}
+.content4 .line{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin: auto;    
+}
+.parent4-cards-card1{
+    width: 320px;
+    height: 200px;
+    padding: 30px;
+    border: 2px solid grey;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    overflow: auto;
+    position: relative; 
+}
+.parent4-cards-card1:hover .cardtitle2{
+    color:#632323 ; font-weight: bold;
+}
+.parent4-cards-card1:after{
+    content: "";
+    position: absolute;
+    width: 0; height: 0; top: 0; left: 0;
+    background-color: #312d2d; opacity: 0;
+    transition: 1s; 
+}
+.parent4-cards-card1:hover::after{
+    width: 100%; height: 100%; opacity: 0.7; 
+}
+.card2-icon{
+ width: 20%; height: 100%;
+ float: left;
+}
+.card2-icon i{
+    font-size: 30px;
+}
+.card2-content2{
+width: 80%; height: 100%;
+float: left;
+}
+.cardtitle2{
+    font-size: 22px;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.cardpara2{
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+}
+.parent5{
+overflow: auto;
+width: 100%;
+height: 100vh;
+}
+.leftpart{
+    width: 50%;
+    border: none;
+    float: left;
+    margin-left: 150px;
+    text-align: justify;
+}
+.title5{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.paragraph5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.list5 li{
+    margin-left: 18px;
+font-size: 22px;
+    line-height: 35px;
+    list-style: none outside url(../images/heart-solid.svg);
+}
+.rightpart{
+    float: left;
+    margin-left: 20px;
+}
+.line5{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin-bottom: 20px;
+}
+.content10{
+    margin: auto;
+    text-align: center;
+}
+.circles{
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background-color: grey;
+    display: inline-block;
+    margin-left: 10px;
+}
+.circles:hover{
+    background-color: #632323;
+}
+.allcircles{
+    margin: auto;
+}
+.teacherphoto{
+    margin-bottom: 10px;
+}
+
+.container10{
+    margin-top: -150px;
+    width: 100%;
+    height: 50vh;
+    z-index: 4;
+    position: relative;
+}
+.container10-icons{
+    width: 80%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    overflow: auto;
+}
+.icon1{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.icon1 i{
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.icon1-title{
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 40px;
+}
+.icon1-p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+}
+.background-img{
+width: 100%;
+height: 100%;
+background-image: url(../images/korean-alphabet.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+z-index: -1;
+position: absolute;
+background-size: cover;
+}
+.overlay10{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+z-index: 3;
+    }
+.parent6{
+    width: 100%;
+    height: 100vh;
+    background-color: #995656;
+    text-align: center;
+}
+.parent6 .line{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin: auto;
+}
+.pricing-content{
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    overflow: auto;
+}
+.basicplan-card{
+    width: 30%;
+    background-color: #fff;
+    text-align: center;
+    height: 60vh;
+    position: relative;
+    padding: 40px 20px;
+    float: left;
+}
+.no2{
+    margin: 0 5%;
+}
+.basicplan-title{
+    text-transform: uppercase;
+    color: #312d2d;
+    margin-bottom: 15px;
+}
+.basicplan-btn{
+width: 100px;
+height: 100px;
+border-radius: 50px;
+border: 2px solid #632323;
+text-align: center;
+padding: 5px;
+margin: auto;
+}
+.price-number{
+font-size: 50px;
+text-transform: uppercase;
+} 
+.month{
+    font-size: 18px;
+    color: #312d2d;
+text-transform: uppercase;
+margin-top: -20px;
+}
+.basicplan-p{
+    list-style: none;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.purchase-btn{
+    width: 150px;
+    height: 50px;
+    background-color: #312d2d;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.basicplan-card:after{
+    content: "";
+    position: absolute;
+    width: 100%; top: 0; height: 0; left: 0;
+background-color: #312d2d; opacity: 0;
+transition: 1s;
+}
+.basicplan-card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.basicplan-card:hover .price-number, .month{
+    color: #632323;
+    transition: 1s;
+}
+.container11{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    margin-top: 150px;
+}
+.background-img2{
+width: 100%;
+height: 100%;
+background-image: url(../images/maxresdefault.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+position: absolute;
+background-size: cover;
+}
+.overlay11{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    }
+.container11-cards{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%,-50%);
+    overflow: auto;
+
+}
+.container11-cards-card1{
+    width: 50%; height: 100%;
+    position: relative;
+    float: left;
+}
+
+.container11-cards-card1-img{
+    width: 100px; height: 100px; border-radius: 50px;
+    float: left;
+    background-position: center;
+    background-size: 200px;
+    background-image: url(../images/pngtree-korea-travel-delicious-food-cartoon-doodle-png-image_6269265.jpg);
+}
+.container11-cards-card1-title{
+    height: 100px;
+    float: left;
+    text-align: left;
+    padding: 25px 0;
+    margin-left: 15px;
+    color: #fff;
+
+}
+.container11-cards-card1-top{
+    width: 90%; height: 100px;
+    text-align: center;
+    margin-top: 50px;
+}
+.container11-cards-card1-bottom{
+    width: 90%; height: 100px;
+    font-size: 18px; 
+    word-spacing: 1px;
+    padding: 0 20px;
+    line-height: 25px;
+    margin-top: 10px;
+    color: #fff;
+
+}
+
+.team{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    text-align: center;       
+}
+.team-content .line{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin: auto;    
+}
+.team-cards{
+    overflow: auto;
+    width: 1100px;
+    height: 300px;
+    margin: 50px auto;
+    }
+    .team-card1{
+        width: 300px;
+        height: 300px;
+        border: #312d2d solid 1px; 
+        padding: 18px 18px;
+        margin-left: 50px;
+        float: left;
+        text-align: center;
+        position: relative;
+    }
+    .team-card1-image{
+        width: 90%;
+        height: 70%;
+        margin:auto;
+        position: relative;
+    } 
+.team-card1-overlay{
+position: absolute;
+background-color: rgba(0, 0, 0, 0.7);
+visibility: hidden;
+opacity: 0;
+transition: 2s;
+top: 0; left: 0; right: 0; bottom: 0;
+}
+.team-card1:hover .team-card1-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+.team-cardtitle1{
+    margin-top: 10px;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: capitalize;
+}
+.team-cardtitle1:hover{
+    color:  #632323;
+}
+.team-card1-jobtitle{
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.team-card1-jobtitle:hover{
+color: #312d2d;
+}
+.sociallinks{
+    height: 100%;
+    width: 50px;
+    margin-left: auto;
+}
+.team-card1-overlay a{
+    display: block;
+    width: 100%;
+    height: 33.33333333333333%;
+    background-color: #312d2d;
+    color: #fff;
+    position: relative;
+}
+.team-card1-overlay a i{
+font-size: 30px;
+top: 50%; left: 50%;
+transform: translate(-50%,-50%);
+position: absolute;
+}
+.team-card1:after{
+content: "";
+position: absolute;
+width: 100%; top: 0; height: 0; left: 0;
+background-color: #632323; opacity: 0;
+transition: 1s;
+}
+.team-card1:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.recentnews{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center; 
+    margin-top: -150px;   
+}
+.recentnews-content-title{
+    text-transform: capitalize;
+    font-size: 40px;
+    padding-bottom: 12px;
+    margin-top: 50px;
+}
+.recentnews-content .line{
+    background-color: #312d2d;
+    width: 60px;
+    height: 4px;
+    margin: auto;
+}
+.recentnews-cards{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    overflow: auto;
+    }
+.card1 , .card2, .card3{
+        width: 30%;
+        height: 100%;
+        border: #312d2d solid 1px; 
+        padding: 18px 18px;
+        float: left;
+        text-align: center;
+        background-color: #fff;
+        margin-top: 70px;
+        position: relative;
+}
+.card1{
+    margin-left: 0;
+}
+.card2{
+    margin-left: 5%; margin-right: 5%;
+    }
+.card3{
+    margin-right: 0;
+}
+    .recentnews-card1-image{
+        width: 90%;
+        height: 200px;
+        margin: auto;
+    }
+.recentnews-card1-image img{
+    width: 100%;
+    height: 100%;
+}
+.recentnews-links{
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.recentnews-links a i{
+    margin-left: 10px;
+}
+
+.recentnews-card1-title{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.info a{
+    text-decoration: none;
+}
+.recentnews-card1-p{
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 22px;
+    padding: 0 10px;
+}
+.recentnews-card:after{
+    content: "";
+    position: absolute;
+    width: 100%; top: 0; height: 0; left: 0;
+    background-color: #63232394; opacity: 0;
+    transition: 1s;
+    }
+.recentnews-card:hover::after{
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+}
+.footer{
+        width: 100%;
+        height: 50vh;
+        background-color: #632323;
+        margin-top: 70px;
+        position: relative;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+}
+.footer-container img{
+    width: 10%; height: 10%;
+    margin: auto;
+}
+.footer-social-links{
+    width: 45%;
+    height: 50px;
+    margin: auto;
+}
+.footer-social-links a i{
+    color: #fff;
+    background-color: #312d2d;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+padding: 10px;
+}
+.footer-copyright{
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}  
